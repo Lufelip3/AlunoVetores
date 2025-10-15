@@ -45,7 +45,8 @@ public class Principal extends javax.swing.JFrame {
         jTIdade = new javax.swing.JTextField();
         jBAdicionar = new javax.swing.JButton();
         jBMostrar = new javax.swing.JButton();
-        jPResult = new javax.swing.JScrollPane();
+        jSCrollpane1 = new javax.swing.JScrollPane();
+        jPResult = new javax.swing.JPanel();
         jBNova = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,6 +73,19 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPResultLayout = new javax.swing.GroupLayout(jPResult);
+        jPResult.setLayout(jPResultLayout);
+        jPResultLayout.setHorizontalGroup(
+            jPResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 386, Short.MAX_VALUE)
+        );
+        jPResultLayout.setVerticalGroup(
+            jPResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 156, Short.MAX_VALUE)
+        );
+
+        jSCrollpane1.setViewportView(jPResult);
+
         jBNova.setText("Cadastrar novamente");
         jBNova.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +100,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPResult)
+                    .addComponent(jSCrollpane1)
                     .addComponent(jLTopo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -126,7 +140,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jBMostrar)
                         .addGap(5, 5, 5)))
-                .addComponent(jPResult, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSCrollpane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBNova)
                 .addContainerGap(12, Short.MAX_VALUE))
@@ -173,7 +187,7 @@ public class Principal extends javax.swing.JFrame {
 
                 if (comp instanceof JLabel && "jLIdade".equals(comp.getName())) {
                     JLabel labelIdade = (JLabel) comp;
-                    labelIdade.setText(String.valueOf(aluno.getNome()));
+                    labelIdade.setText(String.valueOf(aluno.getIdade()));
                 }
             }
             jPResult.add(jp);
@@ -232,7 +246,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLTopo;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jPResult;
+    private javax.swing.JPanel jPResult;
+    private javax.swing.JScrollPane jSCrollpane1;
     private javax.swing.JTextField jTAluno;
     private javax.swing.JTextField jTIdade;
     // End of variables declaration//GEN-END:variables
